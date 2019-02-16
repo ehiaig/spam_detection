@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<title>Spam Detection App</title>
+</head>
+<body>
+<div class="container">
+	<div class="jumbotron">
+    <h2>Spam Detection App</h2> 
+    <p>Enter a text message and I'll tell you whether it's spam or not.</p>
+  </div>
+<form method="post" action="{{ url_for('predict') }}">
+  <div class="form-group">
+    <label for="Review">Message</label>
+    <textarea name="sample_text" class="form-control" placeholder="Enter Sample Message"></textarea> 
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+</body>
+</div>
+</html>
